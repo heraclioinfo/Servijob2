@@ -1,4 +1,3 @@
-
 package miServlet;
 
 import java.io.IOException;
@@ -7,35 +6,27 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Class.*;
-import Capa_Datos.Modulo;
+import Capa_Datos.NegocioUbigeoDistrito;
 import com.google.gson.Gson;
 
-public class control extends HttpServlet {
-    Modulo m=new Modulo();
+public class ControlUbigeoDistrito extends HttpServlet {
+    
+    NegocioUbigeoDistrito m=new NegocioUbigeoDistrito();
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         int op=Integer.parseInt(request.getParameter("op"));
-        if(op==1)listaTrabajador(request, response);
-        if(op==2)ObtenerInformacionTrabajador(request, response);
-    }
-    protected void listaTrabajador(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        int IDTrabajador=Integer.parseInt(request.getParameter("IDTrabajador"));
-        PrintWriter out = response.getWriter();
-        Gson gs=new Gson();
-        out.println(gs.toJson(m.listaTrabajador(IDTrabajador)));        
-    }
-    protected void ObtenerInformacionTrabajador(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        int IDTrabajador=Integer.parseInt(request.getParameter("IDTrabajador"));
-        PrintWriter out = response.getWriter();
-        Gson gs=new Gson();
-        out.println(gs.toJson(m.ObtenerInformacionTrabajador(IDTrabajador)));        
+        if(op==1)ListaUbigeoDistrito(request, response);      
     }
     
-
+    protected void ListaUbigeoDistrito(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        Gson gs=new Gson();
+        out.println(gs.toJson(m.ListaUbigeoDistrito()));        
+    }
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

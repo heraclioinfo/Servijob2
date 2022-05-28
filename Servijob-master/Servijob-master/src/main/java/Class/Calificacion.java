@@ -2,25 +2,20 @@
 package Class;
 
 import java.util.*;
-import java.sql.*;
-import util.MySQLConexion;
 
 public class Calificacion {
     private int IDCalificacion;
     private int IDCliente;
     private int IDTrabajador;
-    private int puntaje;
+    public int Puntajes;
     
     public double PromedioCalificacion(List<Calificacion> list){
        double sum=0;
        for(Calificacion x:list){
-           sum += x.puntaje;
+           sum += x.Puntajes;
        }
        return sum/list.size();
     }
-    public double PorcentajeCalificacion(List<Calificacion> list){
-       return (PromedioCalificacion(list)/5)*100;
-   }
     
     public int getIDCalificacion() {
         return IDCalificacion;
@@ -38,12 +33,12 @@ public class Calificacion {
         this.IDTrabajador = IDTrabajador;
     }
 
-    public int getPuntaje() {
-        return puntaje;
+    public int getPuntajes() {
+        return Puntajes;
     }
 
-    public void setPuntaje(int puntaje) {
-        this.puntaje = puntaje;
+    public void setPuntajes(int Puntajes) {
+        this.Puntajes = Puntajes;
     }
 
     public int getIDCliente() {

@@ -1,17 +1,17 @@
 package Class;
 
-import java.util.*;
-import java.sql.*;
-import util.MySQLConexion;
+
 public class Cliente {
    private int IDCliente;
-   private String nombre;
+   private String IDUbigeoDistrito;
+   private String Nombre;
+   private String Apellido;
    private String Telefono;
-   private String apellido;
-   private String password;
-   private String fecha;
-   
-    
+   private String Contraseña;
+   private String FechaNacimiento;
+   private int TipoDocumento;
+   private String NumeroDocumento;
+
     public int getIDCliente() {
         return IDCliente;
     }
@@ -20,28 +20,28 @@ public class Cliente {
         this.IDCliente = IDCliente;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getIDUbigeoDistrito() {
+        return IDUbigeoDistrito;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setIDUbigeoDistrito(String IDUbigeoDistrito) {
+        this.IDUbigeoDistrito = IDUbigeoDistrito;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
     public String getApellido() {
-        return apellido;
+        return Apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setApellido(String Apellido) {
+        this.Apellido = Apellido;
     }
 
     public String getTelefono() {
@@ -52,12 +52,36 @@ public class Cliente {
         this.Telefono = Telefono;
     }
 
-    public String getFecha() {
-        return fecha;
+    public String getContraseña() {
+        return Contraseña;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setContraseña(String Contraseña) {
+        this.Contraseña = Contraseña;
+    }
+
+    public String getFechaNacimiento() {
+        return FechaNacimiento;
+    }
+
+    public void setFechaNacimiento(String FechaNacimiento) {
+        this.FechaNacimiento = FechaNacimiento;
+    }
+
+    public int getTipoDocumento() {
+        return TipoDocumento;
+    }
+
+    public void setTipoDocumento(int TipoDocumento) {
+        this.TipoDocumento = TipoDocumento;
+    }
+
+    public String getNumeroDocumento() {
+        return NumeroDocumento;
+    }
+
+    public void setNumeroDocumento(String NumeroDocumento) {
+        this.NumeroDocumento = NumeroDocumento;
     }
    
 }

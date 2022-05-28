@@ -1,16 +1,26 @@
 package Class;
 
-import java.util.*;
-import java.sql.*;
-import util.MySQLConexion;
-
 public class Trabajador {
     private int IDTrabajador;
+    private String IDUbigeodistrito;
     private String Nombre;
-    private String Servicio;
-    private String Telefono;
     private String Apellido;
-    private int IDCalificacion;
+    private String Telefono;
+    private String Email;
+    private int TipoDocumento;
+    private String NumeroDocumento;
+    private String Presentacion;
+    private String FechaNacimiento;
+    private String Servicio;
+    private String Distrito;
+
+    public String getDistrito() {
+        return Distrito;
+    }
+
+    public void setDistrito(String Distrito) {
+        this.Distrito = Distrito;
+    }
     
     public int getIDTrabajador() {
         return IDTrabajador;
@@ -28,18 +38,6 @@ public class Trabajador {
         this.Nombre = Nombre;
     }
 
-    public String getServicio() {
-        return Servicio;
-    }
-
-    public void setServicio(String Servicio) {
-        this.Servicio = Servicio;
-    }
-
-    public String getTelefono() {
-        return Telefono;
-    }
-
     public void setTelefono(String Telefono) {
         this.Telefono = Telefono;
     }
@@ -52,12 +50,61 @@ public class Trabajador {
         this.Apellido = Apellido;
     }
 
-    public int getIDCalificacion() {
-        return IDCalificacion;
+    public String getIDUbigeodistrito() {
+        return IDUbigeodistrito;
     }
 
-    public void setIDCalificacion(int IDCalificacion) {
-        this.IDCalificacion = IDCalificacion;
+    public void setIDUbigeodistrito(String IDUbigeodistrito) {
+        this.IDUbigeodistrito = IDUbigeodistrito;
     }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    public int getTipoDocumento() {
+        return TipoDocumento;
+    }
+
+    public void setTipoDocumento(int TipoDocumento) {
+        this.TipoDocumento = TipoDocumento;
+    }
+
+    public String getNumeroDocumento() {
+        return NumeroDocumento;
+    }
+
+    public void setNumeroDocumento(String NumeroDocumento) {
+        this.NumeroDocumento = NumeroDocumento;
+    }
+
     
+
+    public String getPresentacion() {
+        return Presentacion;
+    }
+
+    public void setPresentacion(String Presentacion) {
+        this.Presentacion = Presentacion;
+    }
+
+    public String getFechaNacimiento() {
+        return FechaNacimiento;
+    }
+
+    public void setFechaNacimiento(String FechaNacimiento) {
+        this.FechaNacimiento = FechaNacimiento;
+    }
+
+    public String getServicio() {
+        return Servicio;
+    }
+
+    public void setServicio(String Servicio) {
+        this.Servicio = Servicio;
+    }
 }

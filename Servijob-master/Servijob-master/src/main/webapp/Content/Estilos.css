@@ -6,7 +6,6 @@
 body {
     background: rgb(67 116 195);
     font-family: "open sans", sans-serif;
-    font-size: 12px;
     color: #220a3d;
     overflow-x: hidden;
 }
@@ -111,4 +110,20 @@ body {
     height: 50px;
     border-radius: 50%;
     margin: 5px;
+}
+.container{
+    max-width: 720px;
+}
+
+.datos_panel {
+    width: 700px;
+    margin: 30px;
+}
+.contacto_panel{
+    width: 700px;
+    margin: 30px;
+}
+.password_panel{
+    width: 700px;
+    margin: 30px;
 }
